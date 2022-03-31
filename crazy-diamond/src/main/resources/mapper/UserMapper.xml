@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jojo.crazy.diamond.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jojo.crazy.diamond.entity.User">
+        <id column="id" property="id" />
+        <result column="email" property="email" />
+        <result column="nickname" property="nickname" />
+        <result column="password" property="password" />
+        <result column="role" property="role" />
+        <result column="state" property="state" />
+        <result column="sex" property="sex" />
+        <result column="source" property="source" />
+        <result column="avatar" property="avatar" />
+        <result column="signature" property="signature" />
+        <!--<result column="ext" property="ext" />-->
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+        <result column="phone_num" property="phoneNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, email, nickname, `password`, role, state, sex, `source`, avatar, signature, last_login_time, is_delete, create_at, update_at, phone_num
+    </sql>
+
+</mapper>

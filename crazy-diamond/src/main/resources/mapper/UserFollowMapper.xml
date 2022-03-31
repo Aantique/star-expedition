@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jojo.crazy.diamond.mapper.UserFollowMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jojo.crazy.diamond.entity.UserFollow">
+        <id column="id" property="id" />
+        <result column="followed" property="followed" />
+        <result column="followed_type" property="followedType" />
+        <result column="follower" property="follower" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, followed, followed_type, follower, is_delete, create_at, update_at
+    </sql>
+
+</mapper>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jojo.crazy.diamond.mapper.PostsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jojo.crazy.diamond.entity.Posts">
+        <id column="id" property="id" />
+        <result column="audit_state" property="auditState" />
+        <result column="category" property="category" />
+        <result column="author_id" property="authorId" />
+        <result column="title" property="title" />
+        <result column="content_type" property="contentType" />
+        <result column="markdown_content" property="markdownContent" />
+        <result column="html_content" property="htmlContent" />
+        <result column="views" property="views" />
+        <result column="approvals" property="approvals" />
+        <result column="comments" property="comments" />
+        <result column="type_id" property="typeId" />
+        <result column="head_img" property="headImg" />
+        <result column="official" property="official" />
+        <result column="top" property="top" />
+        <result column="sort" property="sort" />
+        <result column="marrow" property="marrow" />
+        <result column="comment_id" property="commentId" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+    <resultMap id="PostVo" type="com.jojo.crazy.diamond.vo.PostsVo">
+        <id column="id" property="id" />
+        <result column="audit_state" property="auditState" />
+        <result column="category" property="category" />
+        <result column="author_id" property="authorId" />
+        <result column="title" property="title" />
+        <result column="content_type" property="contentType" />
+        <result column="views" property="views" />
+        <result column="approvals" property="approvals" />
+        <result column="comments" property="comments" />
+        <result column="type_id" property="typeId" />
+        <result column="head_img" property="headImg" />
+        <result column="official" property="official" />
+        <result column="top" property="top" />
+        <result column="sort" property="sort" />
+        <result column="marrow" property="marrow" />
+        <result column="comment_id" property="commentId" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, audit_state, category, author_id, title, content_type, markdown_content, html_content, views, approvals, comments, type_id, head_img, official, top, sort, marrow, comment_id, is_delete, create_at, update_at
+    </sql>
+
+
+
+    <select id="selectPostVos" resultMap="PostVo">
+        select Base_Column_List from posts;
+    </select>
+</mapper>
